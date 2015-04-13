@@ -1,7 +1,7 @@
 # big O:
-# nested for loops, but second for loop is partial list.
-# nested inside is a reverse function.
-# n^3?  yet is fast because use a num_floor?
+# nested for loops, but second for loop is partial list m.  (n * m)
+# then the reverse_num function is maybe 3.
+# total = n * m * 3?
 
 
 def max_palindrome(num_ceiling, num_floor):

@@ -2,9 +2,20 @@
     # don't add to factors if already divided by a factor
 # (2) list_factors[-1]
 
-# bigO ? nlogn + n*(nlogn)?
-# first is the find_factors(n) which is nlogn.
-# for loop is n, with nested call to find_factors (nlogn).
+
+# worst case: n is a prime number.
+    # find_factors for initial list of factors = O(n)
+    # but then the for loop doesn't run because lust_factors is empty.
+    # total = O(n)
+
+# worst case: lots of list_factors.
+    # find_factors for initial list of factors = nlogn?  or n?
+    # the for loop is O(m) where m is the length of the list.
+        # then has find_factors run on each. is nested mlogm or m?
+        # considering len() as constant.
+    # total = n + m*m = n + m^2
+
+
 
 
 def largest_prime(n):

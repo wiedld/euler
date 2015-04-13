@@ -1,11 +1,14 @@
 # bigO:
     # while loop (n)
-    # but inside is the Sieve --> divide and conquer?
-    # n * nlogn?
+    # but inside is the Sieve
+        #  --> but this is efficiency, not time complexity.  Correct?
+    # n for position
+    # m for numbers up to n?  n * m ?
+
 
 
 def find_primes_pos(position):
-    list_primes = [2,3,5]
+    list_primes = [2,3,5,7]
     num = 2
     while len(list_primes)<position:
 
