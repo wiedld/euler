@@ -5,6 +5,8 @@
 #######################################################
 # using three new linked lists, with concat at the end.
 # assume all are singly linked lists
+# bigO, time. single while loop, and 2 concats. O(n) +2
+# bigO, space. 3 additional lists, but total is the original N size.
 
 def sort_around_pivot(x, start_LL):
     smaller_LL = LL()
@@ -53,6 +55,8 @@ def concat(LL1, LL2):
 #######################################################
 # perform in place.
 # assume is a doubly linked list.
+# bigO, time. single while loop, linking is k contant events. O(n) + k.
+# bigO, space. constant plus curr/p1/p2.  +3 constant spaces
 
 def in_place_sort_pivot(DLL, x):
     p1, p2, curr = None, None, DLL.head

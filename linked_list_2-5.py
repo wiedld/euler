@@ -4,6 +4,9 @@
 # Input: (3 -> 1 -> 5) + (5 -> 9 -> 2)
 # Output: 8 -> 0 -> 8
 
+# bigO, time.  O(n) where n = length of longest input LL.
+# bigO, space. n or n+1, based on if there is carryover on the last addition.
+
 
 def LL_sum(LL1, LL2):
     LL1_N = LL1.head
@@ -13,12 +16,15 @@ def LL_sum(LL1, LL2):
 
     while True:
         if LL1_N==None and LL2==None:
-            return LL3      # note this LL3 has a final node which is empty.  If needed, could trim with helper.
+            return LL3
+            # note this LL3 has a final node which could be empty if no value is carried.
 
         summed = node_data(LL1_N) + node_data(LL2_N)
+        # add to carried value in data
         LL3_N.data = summed%10 + LL3_N.data
-        LL1_N, LL2_N = node_next(LL1_N), node_next(LL2_N)
 
+        LL1_N, LL2_N = node_next(LL1_N), node_next(LL2_N)
+        # make the next node, with the carried value
         LL3_N = output_LL_next(LL3_N, summed/10)
 
 
