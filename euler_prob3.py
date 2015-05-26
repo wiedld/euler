@@ -50,7 +50,6 @@ def find_factors(n):
         if n%start == 0:
             factors.extend([start,end])
             end = n/start
-            # print "new end:", end
         start +=1
     return factors
 
